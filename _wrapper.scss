@@ -1,0 +1,42 @@
+.wrapper {
+    @media screen and (min-width:1024px) {
+        --margin-left: calc(var(--marleft) + 3.5rem - 8px );
+        margin-left: var(--margin-left);
+        position: relative;
+        padding: 2rem 2rem 1rem 2rem;
+        .navbar {
+            position: fixed;
+            right: 0;
+            top:0;
+            z-index: 999;
+            left: var(--margin-left);
+            background: rgba($color: #070707, $alpha: .5);
+            backdrop-filter: saturate(100%) blur(20px);
+            padding: 1rem calc(2rem + 15px);
+            border-bottom: 1px solid rgba($color: #fff, $alpha: .1);
+        }
+        main {
+            margin-top: 5rem;
+        }
+    }
+    .form-search {
+        position: relative;
+        .btn {
+            position: absolute;
+            right: 10px;
+            padding: 0;
+            border: none;
+            top: calc(50% - 14px);
+            color: #fff;
+        }
+        .form-control {
+            border: none;
+            background: rgba($color: #fff, $alpha: .1);
+            backdrop-filter: blur(10px);
+            @media screen and (min-width:1024px) {
+                width: 300px;
+            }
+        }
+    }
+}
+@import 'overview';

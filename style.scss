@@ -1,0 +1,31 @@
+:root {
+    --bg-color-sc: #999;
+    --primary: #0066FF;
+    --radius: 12px;
+}
+html, body {
+    background: #070707;
+    color: #ffff;
+    text-rendering: optimizeLegibility;
+}
+.text {
+    &-colorado {
+        color: var(--bg-color-sc);
+    }
+}
+body {
+    font-family: "Inter",sans-serif;
+}
+a {
+    color: var(--primary);
+}
+h {
+    &1, &2, &3, &4, &5, &6 {
+        font-family: "Inter",sans-serif;
+    }
+}
+button {
+    appearance: none;
+}
+@import 'sidebar';
+@import 'wrapper';

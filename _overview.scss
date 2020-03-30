@@ -1,0 +1,38 @@
+.overview {
+    .card {
+        background: rgba($color: #fff, $alpha: .05);
+        --this-gap: 1.5rem;
+        padding: var(--this-gap);
+        border-radius: var(--radius);
+        position: relative;
+        @media screen and (max-width:1023px) {
+            margin-bottom: 10px;
+        }
+        .percentage, .iconak, .label-left {
+            position: absolute;
+        }
+        .percentage {
+            right: var(--this-gap);
+            top: var(--this-gap);
+        }
+        h3 {
+            text-align: center;
+            @media screen and (min-width:1024px) {
+                font-size: 48px;
+                padding: 3.5rem 0;
+            }
+            @media screen and (max-width:1023px) {
+                font-size: 42px;
+                padding: 2rem 0;
+            }
+        }
+        .iconak {
+            left: var(--this-gap);
+            top: var(--this-gap);
+        }
+        .label-left {
+            left: var(--this-gap);
+            bottom: var(--this-gap);
+        }
+    }
+}

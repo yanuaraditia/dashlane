@@ -1,0 +1,232 @@
+:root {
+  --bg-color-sc: #999;
+  --primary: #0066FF;
+  --radius: 12px;
+}
+
+html, body {
+  background: #070707;
+  color: #ffff;
+  text-rendering: optimizeLegibility;
+}
+
+.text-colorado {
+  color: var(--bg-color-sc);
+}
+
+body {
+  font-family: "Inter",sans-serif;
+}
+
+a {
+  color: var(--primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Inter",sans-serif;
+}
+
+button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.sidebar {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background: #101010;
+}
+
+@media screen and (min-width: 1024px) {
+  .sidebar {
+    width: 20vw;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .sidebar {
+    padding: 2.5rem 2rem;
+    width: 80vw;
+  }
+  .sidebar-backdrop {
+    position: fixed;
+    width: 20vw;
+    height: 100vh;
+    top: 0;
+    right: 0;
+  }
+}
+
+.sidebar-user {
+  padding-left: 65px;
+  position: relative;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 10px;
+}
+
+.sidebar-user img {
+  --this-w: 50px;
+  border-radius: 100%;
+  width: var(--this-w);
+  height: var(--this-w);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.sidebar-user h3 {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.sidebar-user h6 {
+  font-size: 14px;
+  color: var(--bg-color-sc);
+}
+
+.sidebar-menu {
+  margin-top: 1rem;
+}
+
+.sidebar-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-menu ul li {
+  position: relative;
+}
+
+.sidebar-menu ul li a {
+  display: block;
+  padding: .5rem 0;
+  border-radius: 12px;
+  font-weight: 500;
+  color: #f1f1f1;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.sidebar-menu ul li a .right {
+  position: absolute;
+  right: 0;
+}
+
+.sidebar-menu ul li a .left {
+  margin-right: 10px;
+}
+
+.sidebar-menu ul li a:hover {
+  text-decoration: none;
+  color: var(--primary);
+}
+
+.sidebar-menu ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+  .wrapper {
+    --margin-left: calc(var(--marleft) + 3.5rem - 8px );
+    margin-left: var(--margin-left);
+    position: relative;
+    padding: 2rem 2rem 1rem 2rem;
+  }
+  .wrapper .navbar {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 999;
+    left: var(--margin-left);
+    background: rgba(7, 7, 7, 0.5);
+    -webkit-backdrop-filter: saturate(100%) blur(20px);
+            backdrop-filter: saturate(100%) blur(20px);
+    padding: 1rem calc(2rem + 15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .wrapper main {
+    margin-top: 5rem;
+  }
+}
+
+.wrapper .form-search {
+  position: relative;
+}
+
+.wrapper .form-search .btn {
+  position: absolute;
+  right: 10px;
+  padding: 0;
+  border: none;
+  top: calc(50% - 14px);
+  color: #fff;
+}
+
+.wrapper .form-search .form-control {
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+
+@media screen and (min-width: 1024px) {
+  .wrapper .form-search .form-control {
+    width: 300px;
+  }
+}
+
+.overview .card {
+  background: rgba(255, 255, 255, 0.05);
+  --this-gap: 1.5rem;
+  padding: var(--this-gap);
+  border-radius: var(--radius);
+  position: relative;
+}
+
+@media screen and (max-width: 1023px) {
+  .overview .card {
+    margin-bottom: 10px;
+  }
+}
+
+.overview .card .percentage, .overview .card .iconak, .overview .card .label-left {
+  position: absolute;
+}
+
+.overview .card .percentage {
+  right: var(--this-gap);
+  top: var(--this-gap);
+}
+
+.overview .card h3 {
+  text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .overview .card h3 {
+    font-size: 48px;
+    padding: 3.5rem 0;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .overview .card h3 {
+    font-size: 42px;
+    padding: 2rem 0;
+  }
+}
+
+.overview .card .iconak {
+  left: var(--this-gap);
+  top: var(--this-gap);
+}
+
+.overview .card .label-left {
+  left: var(--this-gap);
+  bottom: var(--this-gap);
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,77 @@
+.sidebar {
+    height: 100vh;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 9999;
+    background: #101010;
+    @media screen and (min-width:1024px) {
+        width: 20vw;
+    }
+    @media screen and (max-width:1023px) {
+        padding: 2.5rem 2rem;
+        width: 80vw;
+        &-backdrop {
+            position: fixed;
+            width: 20vw;
+            height: 100vh;
+            top: 0;
+            right: 0;
+        }
+    }
+    &-user {
+        padding-left: 65px;
+        position: relative;
+        border-bottom: 1px solid rgba($color: #fff, $alpha: .1);
+        padding-bottom: 10px;
+        img {
+            --this-w: 50px;
+            border-radius: 100%;
+            width: var(--this-w);
+            height: var(--this-w);
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        h3 {
+            font-weight: 700;
+            font-size: 18px;
+        }
+        h6 {
+            font-size: 14px;
+            color: var(--bg-color-sc);
+        }
+    }
+    &-menu {
+        margin-top: 1rem;
+        ul {
+            list-style: none;
+            padding: 0;
+            li {
+                position: relative;
+                a {
+                    display: block;
+                    padding: .5rem 0;
+                    border-radius: 12px;
+                    font-weight: 500;
+                    color: #f1f1f1;
+                    transition: all .2s ease-in-out;
+                    .right {
+                        position: absolute;
+                        right: 0;
+                    }
+                    .left {
+                        margin-right: 10px;
+                    }
+                    &:hover {
+                        text-decoration: none;
+                        color: var(--primary);
+                    }
+                }
+                &:not(:last-child) {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sidebar px-lg-4 py-lg-5">
+        <div class="sidebar-user">
+            <img src="/images/user-1.jpg" alt="User example">
+            <h3>Jonathan Axel</h3>
+            <h6>Super Admin</h6>
+        </div>
+        <div class="sidebar-menu">
+            <ul>
+                <li><a href="#"><i class="left" data-feather='home'></i> Home</a></li>
+                <li><a href="#"><i class="left" data-feather='activity'></i> Activity</a></li>
+            </ul>
+        </div>
+        <div class="sidebar-backdrop"></div>
+    </div>
+    <div class="wrapper">
+        <nav class="navbar navbar-expand-lg">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>          
+            <form class="form-inline form-search">
+                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn" type="submit"><i data-feather="search"></i></button>
+            </form>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-lg-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+              </ul>
+            </div>
+        </nav>
+        <main>
+            <section class="overview">
+                <div class="container">
+                    <h3>Overview</h3>
+                    <h6 class="text-colorado mb-lg-4">All overview for today</h6>
+                    <div class="row">
+                        <div class="col-12 col-lg-4">
+                            <div class="card">
+                                <span class="percentage">+20</span>
+                                <i data-feather="user" class="iconak"></i>
+                                <h3>1,332</h3>
+                                <span class="label-left">Items at all</span>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <div class="card">
+                                <span class="percentage">+20</span>
+                                <i data-feather="user" class="iconak"></i>
+                                <h3>332</h3>
+                                <span class="label-left">Items at all</span>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <div class="card">
+                                <span class="percentage">+20</span>
+                                <i data-feather="user" class="iconak"></i>
+                                <h3>1,332</h3>
+                                <span class="label-left">Items at all</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="last-changes mt-3 mt-lg-4">
+                <div class="container">
+                    <h3>Last changes</h3>
+                    <h6 class="text-colorado mb-lg-4">All overview for today</h6>
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">First</th>
+                            <th scope="col">Last</th>
+                            <th scope="col">Handle</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                          </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="main.js"></script>
+</body>
+</html>
