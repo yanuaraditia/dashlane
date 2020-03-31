@@ -1,0 +1,58 @@
+.modal {
+    z-index: 9999;
+    &-backdrop {
+        @media screen and (min-width:1024px) {
+            opacity:1!important;
+            background: rgba($color: #000000, $alpha: .8);
+            backdrop-filter: blur(10px);
+        }
+    }
+    &-content {
+        background: #202020;
+        border:none;
+        border-radius: var(--radius);
+    }
+    &-header {
+        border: none;
+        position: relative;
+        padding: 1.25rem;
+        &::after {
+            height: 1px;
+            left: 1rem;
+            right: 1rem;
+            background: rgba($color: #fff, $alpha: .1);
+            bottom: 0;
+            content: "";
+            position: absolute;
+        }
+        .close {
+            color: #fff;
+        }
+    }
+    &-body {
+        padding: 1.25rem;
+    }
+    &-footer {
+        padding: 1.25rem;
+        position: relative;
+        border: none;
+        justify-content: flex-start;
+        &::before {
+            height: 1px;
+            left: 1rem;
+            right: 1rem;
+            background: rgba($color: #fff, $alpha: .1);
+            top: 0;
+            content: "";
+            position: absolute;
+        }
+        &>* {
+            margin: 0;
+        }
+        .btn {
+            &:not(:last-child) {
+                margin-right: .25rem;
+            }
+        }
+    }
+}

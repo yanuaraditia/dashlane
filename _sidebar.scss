@@ -5,6 +5,7 @@
     left:0;
     z-index: 9999;
     background: #101010;
+    overflow: auto;
     @media screen and (min-width:1024px) {
         width: 20vw;
     }
@@ -47,6 +48,7 @@
         ul {
             list-style: none;
             padding: 0;
+            margin-bottom: 30px;
             li {
                 position: relative;
                 a {
@@ -72,6 +74,10 @@
                     margin-bottom: 10px;
                 }
             }
+        }
+        h3 {
+            font-size: 14px;
+            color: var(--bg-color-sc);
         }
     }
 }

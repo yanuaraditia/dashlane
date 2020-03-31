@@ -1,0 +1,81 @@
+.form {
+    &-control {
+        border-radius: 8px;
+        border: none;
+        background: #202020;
+        &:focus {
+            background: rgba($color: #fff, $alpha: .15);
+            box-shadow: 0 0 0 2px rgba($color: #fff, $alpha: .05);
+        }
+    }
+}
+.select2 {
+    &-container {
+        &.select2-container--focus {
+            .select2-selection--multiple {
+                border: none;
+            }
+        }
+        .select2-selection--single {
+            height: auto;
+            .select2-selection__rendered {
+                padding: .25rem 25px .25rem .75rem;
+            }
+        }
+        .select2-selection--multiple {
+            height: auto;
+            .select2-selection__rendered {
+                padding: 0 .75rem;
+                .select2-selection__choice {
+                    background: rgba($color: #fff, $alpha: .05);
+                    border: none;
+                }
+            }
+        }
+        &--default {
+            .select2-selection--single,.select2-selection--multiple {
+                border: none;
+                border-radius: 8px;
+                background: rgba($color: #fff, $alpha: .1);
+            }
+        }
+    }
+    &-dropdown {
+        background: #202020;
+        border:none;
+        &--above {
+            border-radius: 8px 8px 0 0!important;
+        }
+        &--below {
+            border-radius: 0 0 8px 8px!important;
+        }
+    }
+    &-results {
+        &__option {
+            padding: .25rem .75rem;
+            &--highlighted[aria-selected] {
+                background-color: var(--primary)!important;
+            }
+            &[aria-selected='true'] {
+                background: rgba($color: #fff, $alpha: .05)!important;
+            }
+        }
+    }
+    &-search {
+        &--dropdown {
+            padding: .75rem;
+        }
+        &__field {
+            border: none!important;
+            border-radius: 8px;
+            background: rgba($color: #fff, $alpha: .1);
+            outline: none;
+        }
+    }
+    &-selection {
+        &__arrow {
+            top: calc(50% - 13px)!important;
+            right: .5rem!important;
+        }
+    }
+}

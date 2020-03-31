@@ -1,11 +1,31 @@
 :root {
+  --bg-color: #070707;
   --bg-color-sc: #999;
-  --primary: #0066FF;
+  --primary: #74c162;
+  --primary-dark: #439035;
+  --primary-light: #a6f491;
   --radius: 12px;
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-dark);
+}
+
 html, body {
-  background: #070707;
+  background: var(--bg-color);
   color: #ffff;
   text-rendering: optimizeLegibility;
 }
@@ -22,6 +42,10 @@ a {
   color: var(--primary);
 }
 
+a:hover {
+  color: var(--primary-light);
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "Inter",sans-serif;
 }
@@ -32,6 +56,221 @@ button {
           appearance: none;
 }
 
+.btn {
+  border-radius: 100px;
+  border-width: 2px;
+  padding: .375rem 1.25rem;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-primary:hover, .btn-primary:focus {
+  background-color: var(--primary-light);
+  border-color: var(--primary-light);
+}
+
+.btn-primary:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.btn-secondary {
+  background: #333;
+  border-color: #333;
+}
+
+.btn-danger {
+  background: #f00;
+  border-color: #f00;
+}
+
+.btn-dark {
+  background: #222;
+  border-color: #222;
+}
+
+.btn-outline-primary {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.btn-outline-primary:hover, .btn-outline-primary:focus {
+  background-color: var(--primary-light);
+  border-color: var(--primary-light);
+}
+
+.btn-outline-primary:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.btn-outline-danger {
+  border-color: #f00;
+  color: #f00;
+}
+
+.btn-outline-dark {
+  border-color: #222;
+  color: #222;
+}
+
+.form-control {
+  border-radius: 8px;
+  border: none;
+  background: #202020;
+}
+
+.form-control:focus {
+  background: rgba(255, 255, 255, 0.15);
+  -webkit-box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.05);
+          box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.05);
+}
+
+.select2-container.select2-container--focus .select2-selection--multiple {
+  border: none;
+}
+
+.select2-container .select2-selection--single {
+  height: auto;
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered {
+  padding: .25rem 25px .25rem .75rem;
+}
+
+.select2-container .select2-selection--multiple {
+  height: auto;
+}
+
+.select2-container .select2-selection--multiple .select2-selection__rendered {
+  padding: 0 .75rem;
+}
+
+.select2-container .select2-selection--multiple .select2-selection__rendered .select2-selection__choice {
+  background: rgba(255, 255, 255, 0.05);
+  border: none;
+}
+
+.select2-container--default .select2-selection--single, .select2-container--default .select2-selection--multiple {
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.select2-dropdown {
+  background: #202020;
+  border: none;
+}
+
+.select2-dropdown--above {
+  border-radius: 8px 8px 0 0 !important;
+}
+
+.select2-dropdown--below {
+  border-radius: 0 0 8px 8px !important;
+}
+
+.select2-results__option {
+  padding: .25rem .75rem;
+}
+
+.select2-results__option--highlighted[aria-selected] {
+  background-color: var(--primary) !important;
+}
+
+.select2-results__option[aria-selected='true'] {
+  background: rgba(255, 255, 255, 0.05) !important;
+}
+
+.select2-search--dropdown {
+  padding: .75rem;
+}
+
+.select2-search__field {
+  border: none !important;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  outline: none;
+}
+
+.select2-selection__arrow {
+  top: calc(50% - 13px) !important;
+  right: 0.5rem !important;
+}
+
+.modal {
+  z-index: 9999;
+}
+
+@media screen and (min-width: 1024px) {
+  .modal-backdrop {
+    opacity: 1 !important;
+    background: rgba(0, 0, 0, 0.8);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+  }
+}
+
+.modal-content {
+  background: #202020;
+  border: none;
+  border-radius: var(--radius);
+}
+
+.modal-header {
+  border: none;
+  position: relative;
+  padding: 1.25rem;
+}
+
+.modal-header::after {
+  height: 1px;
+  left: 1rem;
+  right: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  bottom: 0;
+  content: "";
+  position: absolute;
+}
+
+.modal-header .close {
+  color: #fff;
+}
+
+.modal-body {
+  padding: 1.25rem;
+}
+
+.modal-footer {
+  padding: 1.25rem;
+  position: relative;
+  border: none;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.modal-footer::before {
+  height: 1px;
+  left: 1rem;
+  right: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  top: 0;
+  content: "";
+  position: absolute;
+}
+
+.modal-footer > * {
+  margin: 0;
+}
+
+.modal-footer .btn:not(:last-child) {
+  margin-right: .25rem;
+}
+
 .sidebar {
   height: 100vh;
   position: fixed;
@@ -39,6 +278,7 @@ button {
   left: 0;
   z-index: 9999;
   background: #101010;
+  overflow: auto;
 }
 
 @media screen and (min-width: 1024px) {
@@ -95,6 +335,7 @@ button {
 .sidebar-menu ul {
   list-style: none;
   padding: 0;
+  margin-bottom: 30px;
 }
 
 .sidebar-menu ul li {
@@ -127,6 +368,11 @@ button {
 
 .sidebar-menu ul li:not(:last-child) {
   margin-bottom: 10px;
+}
+
+.sidebar-menu h3 {
+  font-size: 14px;
+  color: var(--bg-color-sc);
 }
 
 @media screen and (min-width: 1024px) {
@@ -228,5 +474,69 @@ button {
 .overview .card .label-left {
   left: var(--this-gap);
   bottom: var(--this-gap);
+}
+
+.table td, .table th {
+  padding: 1rem;
+}
+
+.table thead {
+  color: #fff;
+}
+
+.table thead th {
+  border: none;
+}
+
+.table thead th:first-child {
+  border-radius: var(--radius) 0 0 var(--radius);
+}
+
+.table thead th:last-child {
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.table tbody {
+  color: var(--bg-color-sc);
+}
+
+.table tbody tr {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.table tbody tr th:first-child {
+  border-radius: var(--radius) 0 0 var(--radius);
+}
+
+.table tbody tr th, .table tbody tr td {
+  border-color: var(--bg-color);
+}
+
+.table tbody tr td:last-child {
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.table tbody tr td .table-button:not(:last-child) {
+  margin-right: 10px;
+}
+
+.table-button {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 5px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 100px;
+  color: #fff;
+}
+
+.table-button svg {
+  width: 16px;
+  height: 16px;
+}
+
+.table-button:hover {
+  background: #fff;
+  color: var(--bg-color);
 }
 /*# sourceMappingURL=style.css.map */

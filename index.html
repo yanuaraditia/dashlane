@@ -16,10 +16,27 @@
             <h6>Super Admin</h6>
         </div>
         <div class="sidebar-menu">
-            <ul>
-                <li><a href="#"><i class="left" data-feather='home'></i> Home</a></li>
-                <li><a href="#"><i class="left" data-feather='activity'></i> Activity</a></li>
-            </ul>
+          <ul>
+              <li><a href="#"><i class="left" data-feather='home'></i>Dashboard</a></li>
+          </ul>
+          <h3>Produk</h3>
+          <ul>
+            <li><a href="#"><i class="left" data-feather='list'></i>List Produk</a></li>
+            <li><a href="#"><i class="left" data-feather='plus'></i>Tambah Produk</a></li>
+            <li><a href="#"><i class="left" data-feather='list'></i>List Kategori</a></li>
+            <li><a href="#"><i class="left" data-feather='list'></i>Sub Kategori</a></li>
+          </ul>
+          <h3>Manajemen</h3>
+          <ul>
+            <li><a href="#"><i class="left" data-feather='phone'></i>Nomor Telepon</a></li>
+            <li><a href="#"><i class="left" data-feather='map'></i>Pengiriman</a></li>
+            <li><a href="#"><i class="left" data-feather='activity'></i>Best Seller</a></li>
+            <li><a href="#"><i class="left" data-feather='image'></i>Banner</a></li>
+          </ul>
+          <h3>Extra</h3>
+          <ul>
+            <li><a href="#">Compress Gambar</a></li>
+          </ul>
         </div>
         <div class="sidebar-backdrop"></div>
     </div>
@@ -35,24 +52,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ml-lg-auto">
                 <li class="nav-item active">
-                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="#"><i data-feather="settings"></i><span class="d-lg-none"></span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </div>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                  <a class="nav-link" href="#"><i data-feather="power"></i><span class="d-lg-none"></span></a>
                 </li>
               </ul>
             </div>
@@ -101,6 +104,7 @@
                             <th scope="col">First</th>
                             <th scope="col">Last</th>
                             <th scope="col">Handle</th>
+                            <th></th>
                           </tr>
                         </thead>
                         <tbody>
@@ -109,18 +113,42 @@
                             <td>Mark</td>
                             <td>Otto</td>
                             <td>@mdo</td>
+                            <td class="text-right">
+                              <a href="#" class="table-button">
+                                <i data-feather="edit"></i>
+                              </a>
+                              <a href="#" class="table-button">
+                                <i data-feather="trash"></i>
+                              </a>
+                            </td>
                           </tr>
                           <tr>
                             <th scope="row">2</th>
                             <td>Jacob</td>
                             <td>Thornton</td>
                             <td>@fat</td>
+                            <td class="text-right">
+                              <a href="#" class="table-button">
+                                <i data-feather="edit"></i>
+                              </a>
+                              <a href="#" class="table-button">
+                                <i data-feather="trash"></i>
+                              </a>
+                            </td>
                           </tr>
                           <tr>
                             <th scope="row">3</th>
                             <td>Larry</td>
                             <td>the Bird</td>
                             <td>@twitter</td>
+                            <td class="text-right">
+                              <a href="#" class="table-button">
+                                <i data-feather="edit"></i>
+                              </a>
+                              <a href="#" class="table-button">
+                                <i data-feather="trash"></i>
+                              </a>
+                            </td>
                           </tr>
                         </tbody>
                     </table>
